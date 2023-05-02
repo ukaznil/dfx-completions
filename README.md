@@ -4,7 +4,7 @@
 
 ## zsh
 
-Find and `_dfx` file in the directory, the name of which is the version of `dfx` you're using (e.g., `0.14.0`). It contains the necessary completion function.
+Find `_dfx` file in the directory, the name of which is the version of `dfx` you're using (e.g., `0.14.0`). It contains the necessary completion function.
 
 Download and put it on your local directory for zsh completions (e.g., `$HOME/.zsh.d/completions`).
 
@@ -58,5 +58,3 @@ wallet             -- Helper commands to manage the user's cycles wallet
 ```
 
 **Enjoy your development on IC!!**
-
-
