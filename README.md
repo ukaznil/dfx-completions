@@ -1,12 +1,12 @@
 # dfx-completions
 
-**Addtional completion definitions for IC developers.** Only zsh are supported (bash will be added soon).
+**Addtional completion definitions for IC developers.** Only zsh is supported (bash will be added soon).
 
 ## zsh
 
 Find and `_dfx` file in the directory, the name of which is the version of `dfx` you're using (e.g., `0.14.0`). It contains the necessary completion function.
 
-Download and put it on your local directory for zsh completions (e.g., `$HOME/.zsh.d/completions/`).
+Download and put it on your local directory for zsh completions (e.g., `$HOME/.zsh.d/completions`).
 
 Edit your `$HOME/.zshrc` (or whatever you're using to configure your zsh) by adding the above directory into `$FPATH` such that the zsh's completion functionality can find it. Replace "`$HOME/.zsh.d/completions`" with the directory you've placed `_dfx` on.
 
@@ -21,7 +21,7 @@ $ exec $SHELL
 $ compinit
 ```
 
-Try the completions for `dfx` commands work well! You will find like this:
+Try the completions for `dfx` commands! Upon typing `dfx [TAB]`, you will find like this:
 
 ```
 $ dfx [TAB]
