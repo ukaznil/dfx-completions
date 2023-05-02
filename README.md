@@ -1,6 +1,8 @@
 # dfx-completions
 
-**Addtional completion definitions for IC developers.** Only zsh is supported (bash will be added soon).
+Addtional completion definitions for IC developers. Only zsh and bash are supported. 
+
+**Enjoy your development on IC!!**
 
 ## zsh
 
@@ -10,7 +12,9 @@ Download and put it on your local directory for zsh completions (e.g., `$HOME/.z
 
 Edit your `$HOME/.zshrc` (or whatever you're using to configure your zsh) by adding the above directory into `$FPATH` such that the zsh's completion functionality can find it. Replace "`$HOME/.zsh.d/completions`" with the directory you've placed `_dfx` on.
 
-```.zshrc
+```
+# `$HOME/.zshrc`
+
 export FPATH=$HOME/.zsh.d/completions:$FPATH
 ```
 
@@ -57,4 +61,49 @@ upgrade            -- Upgrade DFX
 wallet             -- Helper commands to manage the user's cycles wallet
 ```
 
-**Enjoy your development on IC!!**
+## bash
+
+Find `dfx.bash` file in the directory, the name of which is the version of `dfx` you're using (e.g., `0.14.0`). It contains the necessary completion function.
+
+Download and put it on your local directory.
+
+Edit your `$HOME/.bashrc` (or whatever you're using to configure your zsh) so that bash automatically loads `dfx.bash` when it launches. Replace "`path/to/dfx.bash`" with the directory you've placed `dfx.bash` on.
+
+```
+# `$HOME/.bashrc`
+
+source path/to/dfx.bash
+```
+
+Refresh your bash by
+
+```
+$ exec $SHELL
+```
+
+Try the completions for `dfx` commands! Upon typing `dfx [TAB]`, you will find like this:
+
+```
+$ dfx [TAB]
+
+--help                                               fix
+--identity                                           generate
+--log                                                help
+--logfile                                            identity
+--provisional-create-canister-effective-canister-id  info
+--quiet                                              ledger
+--verbose                                            new
+--version                                            nns
+-V                                                   ping
+-h                                                   pull
+-q                                                   quickstart
+-v                                                   remote
+_language-service                                    replica
+beta                                                 schema
+bootstrap                                            sns
+build                                                start
+cache                                                stop
+canister                                             toolchain
+deploy                                               upgrade
+diagnose                                             wallet
+```
